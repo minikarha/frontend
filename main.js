@@ -22,3 +22,8 @@ document.querySelector("#app").innerHTML = `
 `
 
 setupCounter(document.querySelector("#counter"))
+
+if (process.env.NODE_ENV === "development") {
+    const { worker } = require("./src/mocks/browser")
+    worker.start()
+}
