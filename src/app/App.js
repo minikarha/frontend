@@ -1,7 +1,7 @@
 import HeaderModel from "../widgets/header/model/index.js";
 
 const runApp = async () => {
-    const runWidgets = async () => { //TODO listener на document ready state
+    const runWidgets = async () => {
         new HeaderModel()
         await Promise.all(Object.keys(import.meta.glob("../**/*.pcss", { "query": "?inline" })).map(path => import(`${path}`).then((module) => module?.default ?? module)))
     }
