@@ -10,7 +10,7 @@ export default () => {
 ${Header()}
             <h1>Главная1</h1>
             ${Button({
-            label: "Тест",
+            label: "Frontend не моё))",
             extraAttrs: {
                 "data-js-require": true,
                 "id": "btn"
